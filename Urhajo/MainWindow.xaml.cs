@@ -90,5 +90,11 @@ namespace Urhajo
             var csoportok = urhajok.GroupBy(g => g.Gyarto).Select(x => new{ gyarto = x.Key, db = x.Count(),});
             adatok.ItemsSource = csoportok;
         }
+
+        private void nevalapjan(object sender, RoutedEventArgs e)
+        {
+            var nevAlapjan = urhajok.GroupBy(u => u.Nev == nevMezo.Text);
+            adatok.ItemsSource = nevAlapjan;
+        }
     }
 }

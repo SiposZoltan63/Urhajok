@@ -15,6 +15,10 @@
             <Button Content="Mennyi Űrhajó van" Height="25" Margin="10" Click="darab"/>
             <Button Content="Legnagyobb hatótávolságú" Height="25" Margin="10" Click="legnagyobbhatotav"/>
             <Button Content="Sikeres küldetések" Height="25" Margin="10" Click="sikeres"/>
+            <Button Content="A legénység átlaga" Height="25" Margin="10" Click="atlagl"/>
+            <Button Content="Gyártok Szerint Rendezés" Height="25" Margin="10" Click="gyartokszerint"/>
+            <Button Content="Keresés név alapján" Height="25" Margin="10" Click="nevalapjan"/>
+            <TextBox TextWrapping="Wrap" Text="" Margin="10" Height="25" x:Name="nevMezo"/>
         </StackPanel>
         <StackPanel Grid.Column="1">
             <DataGrid Grid.Column="1" x:Name="adatok" d:ItemsSource="{d:SampleData ItemCount=5}"/>
