@@ -73,5 +73,22 @@ namespace Urhajo
             }
             adatok.ItemsSource = Csaksikeres;
         }
+
+        private void atlagl(object sender, RoutedEventArgs e)
+        {
+            int osszeg = 0;
+            foreach (var item in urhajok)
+            {
+                osszeg += item.Legenyseg;
+            }
+            double atlag = (double)osszeg / urhajok.Count();
+            MessageBox.Show($"A legénység átlaga {atlag}");
+        }
+
+        private void gyartokszerint(object sender, RoutedEventArgs e)
+        {
+            var csoportok = urhajok.GroupBy(g => g.Gyarto).Select(x => new{ gyarto = x.Key, db = x.Count(),});
+            adatok.ItemsSource = csoportok;
+        }
     }
 }
